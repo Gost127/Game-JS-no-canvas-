@@ -1,0 +1,163 @@
+<!DOCTYPE html>
+<html lang=''> <!-- Язык -->
+
+<head>
+  <meta charset='UTF-8'>
+  <meta http-equiv='X-UA-Compatible' content='IE=edge'>
+  <meta name='viewport' content='width=device-width, initial-scale=1.0'>
+  <title></title>
+  <style>
+    .c {
+      display: inline-block;
+      position: relative;
+      left: 50%;
+      top: -50%;
+      transform: translate(-50%, 50%);
+      border: 3px solid #000;
+      width: 700px;
+      height: 400px;
+      user-select: none;
+      pointer-events: none;
+    }
+    
+    .b {
+      display: inline-block;
+      position: absolute;
+      left: 50%;
+      top: 50%;
+      transform: translate(-50%, -50%);
+      width: 25px;
+      height: 25px;
+      background-color: blueviolet;
+      visibility: hidden;
+    }
+
+    .t {
+      position: absolute;
+      width: 25px;
+      height: 25px;
+      left: 0;
+      top: 0;
+      background-color: red;
+    }
+
+    .score {
+      display: flex;
+      font-size: 54px;;
+      position: absolute;
+      left: 50%;
+      top: 15%;
+      transform: translate(-50%, -50%);
+      font-family:'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif;
+      visibility: hidden;
+    }
+
+
+    .time {
+      position: relative;
+      margin-right: 50px;
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+    }
+
+    .sc {
+      position: relative;
+      margin-right: 50px;
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+    }
+    .delay {
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+    }
+    p {
+      margin: 0;
+      display: inline-block;
+    }
+    .btn {
+      font-size: 34px;
+      position: absolute;
+      left: 50%;
+      top: 60%;
+      transform: translate(-50%, -50%);
+      font-family:'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif;
+      background: none;
+      border: 1px solid #000;
+      padding: 10px 25px;
+      transition: all 0.5s;
+      z-index: 1000;
+    }
+    .records {
+      display: flex;
+      font-size: 27px;
+      position: absolute;
+      left: 50%;
+      top: 75%;
+      transform: translate(-50%, -50%);
+      font-family:'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif;
+      visibility: hidden;
+    }
+    .rt {
+      margin-right: 25px;
+    }
+    .nr {
+      position: absolute;
+      top: -10px;
+      left: 50%;
+      transform: translateX(-50%);
+      font-size: 27px;
+      text-align: center;
+      width: 150px;
+    }
+    .play {
+      font-size: 34px;
+      position: absolute;
+      left: 50%;
+      top: 45%;
+      transform: translate(-50%, -50%);
+      font-family:'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif;
+      background: none;
+      border: 1px solid #000;
+      padding: 10px 25px;
+      transition: all 0.5s;
+      z-index: 1000;
+    }
+    .reset {
+    font-size: 34px;
+    position: absolute;
+    left: 50%;
+    top: 94px;
+    transform: translate(-50%, -50%);
+    font-family: 'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif;
+    background: none;
+    border: 1px solid #000;
+    padding: 10px 25px;
+    transition: all 0.5s;
+    z-index: 1000;
+    width: 200px;
+    }
+  </style>
+</head>
+
+<body>
+  <div class="play">Play</div>
+  <div class="score">
+    <div class="time">time <p>0</p></div>
+    <div class="sc">score<p>0</p></div>
+    <div class="delay">delay<p>1000</p></div>
+  </div>
+  <div class="c" style>
+    <div class="b"></div>
+  </div>
+  <div class="records">
+    <div class="rt">Best time: <p>0</p></div>
+    <div class="rsc">Best score: <p>0</p></div>
+    <div class="reset">Reset records</div>
+  </div>
+</body>
+<script src="script.js"></script>
+
+</html>
